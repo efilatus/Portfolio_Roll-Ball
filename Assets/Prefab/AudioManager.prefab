@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2108909356781157769
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2108909356781157775}
+  - component: {fileID: 2108909356781157774}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2108909356781157775
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108909356781157769}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.7272067, y: 2.5253153, z: -15.664623}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2108909356781157774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108909356781157769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 902d0779f7fab5a47b17e56a129f4a4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sounds:
+  - name: Music
+    clip: {fileID: 8300000, guid: 816b6eab58d24c646a55f35fb63b0f1f, type: 3}
+    output: {fileID: -727075253909979020, guid: 38205b0aef816fd409add4ce24ce29bb,
+      type: 2}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: MusicLevel3
+    clip: {fileID: 8300000, guid: 10389977f1b28df4582103a666416cf1, type: 3}
+    output: {fileID: -727075253909979020, guid: 38205b0aef816fd409add4ce24ce29bb,
+      type: 2}
+    volume: 0.7
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Jump
+    clip: {fileID: 8300000, guid: 0516b318d71b9f84fb9c6b61af9136c8, type: 3}
+    output: {fileID: -5602642388503930935, guid: 38205b0aef816fd409add4ce24ce29bb,
+      type: 2}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Hit
+    clip: {fileID: 8300000, guid: 8ec32e085dc500243a1df3680f164189, type: 3}
+    output: {fileID: -5602642388503930935, guid: 38205b0aef816fd409add4ce24ce29bb,
+      type: 2}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: GameOver
+    clip: {fileID: 8300000, guid: b02a1f300efeefa4ab8f3a3c6ebf6e98, type: 3}
+    output: {fileID: -5602642388503930935, guid: 38205b0aef816fd409add4ce24ce29bb,
+      type: 2}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Coin
+    clip: {fileID: 8300000, guid: a932d32fca391cd48b4a00bba29315cd, type: 3}
+    output: {fileID: -9110025665634003463, guid: 38205b0aef816fd409add4ce24ce29bb,
+      type: 2}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Teleport
+    clip: {fileID: 8300000, guid: 9fc03a91b5216b74394a6166059d68f2, type: 3}
+    output: {fileID: 1098317704314374869, guid: 38205b0aef816fd409add4ce24ce29bb,
+      type: 2}
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Button
+    clip: {fileID: 8300000, guid: 329386c25b4a8ab4ea01da088c2cb69a, type: 3}
+    output: {fileID: 1098317704314374869, guid: 38205b0aef816fd409add4ce24ce29bb,
+      type: 2}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
