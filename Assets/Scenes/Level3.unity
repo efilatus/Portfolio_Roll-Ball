@@ -2399,12 +2399,12 @@ PrefabInstance:
     - target: {fileID: 3046101238439716904, guid: 4b73993e38dce8e4ba185b61f3256a0e,
         type: 3}
       propertyPath: _speed
-      value: 220
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 3046101238439716904, guid: 4b73993e38dce8e4ba185b61f3256a0e,
         type: 3}
       propertyPath: _jumpForce
-      value: 5000
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 3046101238439716907, guid: 4b73993e38dce8e4ba185b61f3256a0e,
         type: 3}

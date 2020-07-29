@@ -16,39 +16,33 @@ public class PlayerMove : MonoBehaviour
     [SerializeField]
     Collider _collider;
 
-    private void Update()
-    {
-        //Если игрок но земле он может совершить прыжок
-        if (isGround()) 
-        {
-            if (Input.GetKeyDown("space"))
-            {
-                FindObjectOfType<AudioManager>().Play("Jump");
-                _charRB.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
-            }
-        }
-    }
-
     void FixedUpdate()
     {
-        //Система контроля игрока
-        if (Input.GetKey(KeyCode.W))
-        {
-            _charRB.AddForce(Camera.main.transform.forward * _speed * Time.fixedDeltaTime);
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            _charRB.AddForce(Camera.main.transform.forward * -_speed * Time.fixedDeltaTime);
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            _charRB.AddForce(Camera.main.transform.right * _speed * Time.fixedDeltaTime);
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            _charRB.AddForce(Camera.main.transform.right * -_speed * Time.fixedDeltaTime);
-        }
+        MovementLogic();
+        JumpLogic();
+    }
 
+    private void MovementLogic()
+    {
+        //Система контроля игрока
+        float hor = Input.GetAxisRaw("Horizontal");
+        float ver = Input.GetAxisRaw("Vertical");
+        Vector3 movement = new Vector3(hor, 0, ver);
+        movement = Camera.main.transform.TransformDirection(movement);
+        movement.y = 0.0f;
+        _charRB.AddForce(movement * _speed * Time.fixedDeltaTime);
+    }
+
+    private void JumpLogic()
+    {
+        if (Input.GetAxis("Jump") > 0)
+        {
+            if (isGround())
+            {
+                FindObjectOfType<AudioManager>().Play("Jump");
+                _charRB.AddForce(Vector3.up * _jumpForce);
+            }
+        }
     }
 
     //Проигрывает звук удара при ударе о поверхность любого объекта
